@@ -266,14 +266,16 @@ function ComingSoonCard({ item, icon }: { item: ComingSoon; icon: React.ReactNod
             <p className="mt-3 max-w-lg whitespace-pre-line font-display text-base font-medium italic leading-relaxed text-white/90 lg:mt-4 lg:text-lg">{tr("cellar.note")}</p>
 
             {item.tasting && (
-              <div className="mt-4 max-w-md md:max-w-[52%] lg:mt-6">
+              <div className="mt-4 max-w-lg md:max-w-[56%] lg:mt-6">
                 <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.3em] text-white/55">{tr("cellar.tasting")}</p>
                 {item.tasting.map((t) => (
-                  <div key={t.label} className="flex items-baseline gap-3 border-b border-white/15 py-2 last:border-b-0 lg:py-2.5">
+                  <div key={t.label} className="flex items-baseline gap-2 border-b border-white/15 py-2 last:border-b-0 lg:py-2.5">
                     <span className="w-5 shrink-0 text-right font-display text-xl font-semibold leading-none text-white">{t.value}</span>
-                    <span className="font-display text-lg font-medium leading-none text-white">{tr(t.label as never)}</span>
-                    <span className="mx-1 flex-1 border-b border-dotted border-white/30" />
-                    <span className="shrink-0 text-xs italic text-white/65">{t.sub.startsWith("cellar.") ? tr(t.sub as never) : t.sub}</span>
+                    <span className="shrink-0 whitespace-nowrap font-display text-lg font-medium leading-none text-white">{tr(t.label as never)}</span>
+                    <span className="mx-1 min-w-[1.5rem] flex-1 self-center border-b border-dotted border-white/30" />
+                    <span className="max-w-[52%] text-right text-xs italic leading-snug text-white/65">
+                      {t.sub.startsWith("cellar.") ? tr(t.sub as never) : t.sub}
+                    </span>
                   </div>
                 ))}
               </div>
