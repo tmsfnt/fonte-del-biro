@@ -297,7 +297,7 @@ function ProductModal({ product, onClose }: { product: Product | null; onClose: 
             exit={{ y: 30, opacity: 0, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 28 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative grid w-full max-w-4xl overflow-hidden rounded-t-[2rem] bg-cream shadow-2xl md:grid-cols-2 md:rounded-[2rem]"
+            className="relative grid max-h-[92vh] w-full max-w-4xl overflow-y-auto overflow-x-hidden rounded-t-[2rem] bg-cream shadow-2xl md:max-h-[90vh] md:grid-cols-2 md:rounded-[2rem]"
           >
             <button
               type="button"

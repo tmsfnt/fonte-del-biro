@@ -105,6 +105,14 @@ function StackedCard({ index, total, children }: { index: number; total: number;
 function MainCard({ loc }: { loc: Location }): JSX.Element {
   const { t } = useLang();
   const [zoom, setZoom] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const update = (): void => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
   useEffect(() => {
     if (!zoom) return;
     const onKey = (e: KeyboardEvent): void => {
@@ -136,7 +144,7 @@ function MainCard({ loc }: { loc: Location }): JSX.Element {
         className="pointer-events-none absolute right-10 top-[22%] z-30 hidden overflow-hidden rounded-[1.6rem] shadow-[0_30px_60px_-18px_rgba(0,0,0,0.55)] md:block lg:right-12"
         style={{ height: "46%", aspectRatio: "4/3" }}
       >
-        {loc.video ? (
+        {loc.video && isDesktop ? (
           <video
             src={loc.video}
             autoPlay
@@ -236,7 +244,7 @@ function ComingSoonCard({ item, icon }: { item: ComingSoon; icon: React.ReactNod
   const { t: tr } = useLang();
   return (
     <article
-      className="relative aspect-[4/5] max-h-[calc(100vh-11rem)] overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-30px_rgba(26,20,22,0.5)] sm:aspect-[16/10]"
+      className="relative overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-30px_rgba(26,20,22,0.5)] sm:aspect-[16/10] sm:max-h-[calc(100vh-11rem)]"
     >
       <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${item.bgImage})` }} />
       <div className="absolute inset-0 bg-ink/40" />
@@ -253,8 +261,8 @@ function ComingSoonCard({ item, icon }: { item: ComingSoon; icon: React.ReactNod
       />
 
 
-      <div className="glass-light absolute inset-5 z-20 rounded-[2rem] md:inset-8">
-        <div className="flex h-full flex-col justify-between p-6 md:p-10">
+      <div className="glass-light relative z-20 m-4 rounded-[2rem] sm:absolute sm:inset-5 sm:m-0 md:inset-8">
+        <div className="flex h-full flex-col justify-between gap-6 p-6 sm:gap-0 md:p-10">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/80">{tr("cellar.eyebrow")}</span>
             <span className="grid h-10 w-10 place-items-center rounded-full border border-white/30 bg-white/15 text-white">{icon}</span>
@@ -326,13 +334,7 @@ export default function Locations(): JSX.Element {
             {t("about.p1")}
           </p>
           <p className="mt-5 font-display text-xl font-medium leading-[1.65] text-ink/80 [text-wrap:pretty] md:text-[1.4rem]">
-            {t("about.p2a")}
-            <em className="text-granata">Merlot</em>
-            {t("about.p2b")}
-            <em className="text-granata">Sangiovese</em>
-            {t("about.p2c")}
-            <em className="text-granata">{t("about.spumante")}</em>
-            {t("about.p2d")}
+            {t("about.p2")}
           </p>
         </div>
 
