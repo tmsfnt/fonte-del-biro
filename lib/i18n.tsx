@@ -19,17 +19,13 @@ const STR = {
     "about.title1": "Una sorgente,",
     "about.title2": "tre generazioni.",
     "about.p1":
-      "Fonte del Biro è un'azienda agricola immersa tra le colline del Chianti Fiorentino, nel comune di Barberino Tavarnelle. Attiva dal 1992, si estende su una superficie di circa 16 ettari, di cui 5 coltivati a vigneto, e ospita circa 400 piante di olivo.",
-    "about.p1.hl": "Chianti Fiorentino",
-    "about.p2a": "La produzione comprende tre vini: un ",
-    "about.p2b": " in purezza, un ",
-    "about.p2c": " in purezza e uno ",
-    "about.p2d": ".",
-    "about.spumante": "spumante metodo classico",
+      "Fonte del Biro è un'azienda agricola immersa tra le colline del Chianti Fiorentino, nel comune di Barberino Tavarnelle. Attiva dal 1993, si estende su una superficie di circa 16 ettari, di cui 5 coltivati a vigneto, e conta oltre 400 olivi.",
+    "about.p2":
+      "La produzione comprende cinque vini: un Merlot e un Sangiovese in purezza, un blend di Sangiovese, Merlot e Syrah, un rosé e uno spumante Metodo Classico. Si affiancano ai vini due oli extravergine di oliva.",
     // Tenuta
     "estate.eyebrow": "La tenuta · 01",
     "estate.subtitle":
-      "Prima del vino, prima degli ulivi, c'era l'acqua. Il resto è venuto dopo. La sorgente del Biro ha reso fertile questa collina molto prima che qualcuno pensasse di piantarci una vigna. Dal 1992 lavoriamo la terra che ha preparato lei.",
+      "Prima del vino, prima degli ulivi, c'era l'acqua. Il resto è venuto dopo. La sorgente del Biro ha reso fertile questa collina molto prima che qualcuno pensasse di piantarci una vigna. Dal 1993 lavoriamo la terra che ha preparato lei.",
     "estate.stat.hectares": "Ettari",
     "estate.stat.vineyard": "Ettari a vigneto",
     "estate.stat.olives": "Piante di olivo",
@@ -83,16 +79,12 @@ const STR = {
     "about.title1": "One spring,",
     "about.title2": "three generations.",
     "about.p1":
-      "Fonte del Biro is a family farm nestled in the hills of the Florentine Chianti, in the municipality of Barberino Tavarnelle. Founded in 1992, it covers around 16 hectares — 5 of them planted with vines — and is home to some 400 olive trees.",
-    "about.p1.hl": "Florentine Chianti",
-    "about.p2a": "We make three wines: a single-varietal ",
-    "about.p2b": ", a single-varietal ",
-    "about.p2c": " and a ",
-    "about.p2d": ".",
-    "about.spumante": "classic-method sparkling wine",
+      "Fonte del Biro is a family farm nestled in the hills of the Florentine Chianti, in the municipality of Barberino Tavarnelle. Active since 1993, it covers around 16 hectares — 5 of them planted with vines — and counts over 400 olive trees.",
+    "about.p2":
+      "We produce five wines: a single-varietal Merlot and Sangiovese, a blend of Sangiovese, Merlot and Syrah, a rosé and a classic-method sparkling wine. Alongside the wines, two extra virgin olive oils.",
     "estate.eyebrow": "The estate · 01",
     "estate.subtitle":
-      "Before the wine, before the olive trees, there was water. Everything else came later. The Biro spring made this hillside fertile long before anyone thought of planting a vineyard here. Since 1992 we have worked the land it prepared.",
+      "Before the wine, before the olive trees, there was water. Everything else came later. The Biro spring made this hillside fertile long before anyone thought of planting a vineyard here. Since 1993 we have worked the land it prepared.",
     "estate.stat.hectares": "Hectares",
     "estate.stat.vineyard": "Vineyard hectares",
     "estate.stat.olives": "Olive trees",
